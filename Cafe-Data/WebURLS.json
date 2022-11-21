@@ -1,0 +1,8 @@
+{
+	"Login":"https://nid.naver.com/nidlogin.login",
+	"TargetURL" : "https://cafe.naver.com/ca-fe/cafes/27842958/members/Iep9BEdfIxd759MU7JgtSg?page={num}",
+	"ContentCount" : "#app > div > div.sub_tit_profile > div > div.info_area > div > span:nth-child(2) > em",
+	"PageSelector" : "#app > div > div.paginate_area > div > button:nth-child(2)",
+	"Next" : "#app > div > div.paginate_area > div > button.btn.type_next",
+	"ContentSelector" : "#app > div > div.article-board.article_profile > table > tbody > tr:nth-child({num})"
+}

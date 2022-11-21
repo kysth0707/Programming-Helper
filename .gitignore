@@ -2,3 +2,6 @@ __pycache__/*
 Translator/__pycache__/*
 Cafe-Auto-Uploader/UserDatas.json
 Cafe-Auto-Uploader/chromedriver.exe
+Cafe-Data/UserDatas.json
+Cafe-Data/chromedriver.exe
+Cafe-Data/Output.json
