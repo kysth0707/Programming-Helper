@@ -68,7 +68,6 @@ def GetContents(Num, IndexNum):
 	Header = False
 
 	try:
-		# #app > div > div.article-board.article_profile > table > tbody > tr:nth-child(1) > td.td_article > div.board-list > div > a.article
 		ContentTitle = str(driver.find_element(By.CSS_SELECTOR, f"{SearchTop} > td.td_article > div.board-list > div > a.article").text)
 		try:
 			Header = str(driver.find_element(By.CSS_SELECTOR, f"{SearchTop} > td.td_article > div.board-list > div > a.article > span").text)
@@ -107,20 +106,20 @@ Output = {
 		  }
 Data = []
 
+
 EstimatedTime = time.time()
 
-Index = 0
+Index = ContentCount
 for CurrentPage in range(PageCount - 1):
-	# FindAndClick(str(WebURLS['PageSelector']).replace('{num}', f'2'))
 	print(f'{CurrentPage + 1} / {PageCount} | {(CurrentPage + 1)/PageCount * 100}%')
 
-	for i in range(10):
+	for i in range(15):
 		try:
 			Data.append(GetContents(1 + i, Index))
 		except Exception as e:
 			print(e)
 			print(Index, CurrentPage + 1)
-		Index += 1
+		Index -= 1
 
 	driver.get(GetPageURL(CurrentPage + 2))
 	Wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, str(WebURLS['ContentSelector']).replace("{num}", "1"))))
@@ -131,7 +130,7 @@ for CurrentPage in range(PageCount - 1):
 
 for i in range(ContentCount % 15):
 	Data.append(GetContents(1 + i, Index))
-	Index += 1
+	Index -= 1
 
 Output["Data"] = Data
 
