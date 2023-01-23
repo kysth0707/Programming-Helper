@@ -1,0 +1,8 @@
+{
+	"Login":"https://nid.naver.com/nidlogin.login",
+	"TargetURL" : "https://cafe.naver.com/playct?iframe_url=/ArticleSearchList.nhn%3Fsearch.clubid=29326305%26search.menuid=83%26search.media=0%26search.searchdate=all%26search.defaultValue=1%26userDisplay=15%26search.option=0%26search.sortBy=date%26search.searchBy=0%26search.query=%BA%ED%B7%CF%BC%AD%B9%F6+%C0%FC%C3%BC+%C1%F6%B5%B5%26search.viewtype=title%26search.page={num}",
+	"PageSelector" : "#app > div > div.paginate_area > div > button:nth-child(2)",
+	"Next" : "#app > div > div.paginate_area > div > button.btn.type_next",
+	"ContentSelector" : "#main-area > div.article-board.result-board.m-tcol-c > table > tbody > tr:nth-child({num})",
+	"WaitUntil" : "#main-area > div.article-board.result-board.m-tcol-c > table > tbody > tr:nth-child(1) > td.td_article > div.board-list > div > a"
+}
